@@ -1,7 +1,7 @@
 package ru.job4j.tracker;
 
 public class StubOutput implements Output {
-    private  final StringBuilder buffer = new StringBuilder();
+    private final StringBuilder buffer = new StringBuilder();
 
     @Override
     public void println(Object obj) {
@@ -10,6 +10,7 @@ public class StubOutput implements Output {
         } else {
             buffer.append("null");
         }
+        buffer.append(System.lineSeparator());
     }
 
     @Override
